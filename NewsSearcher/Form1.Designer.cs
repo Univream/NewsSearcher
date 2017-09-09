@@ -1,6 +1,6 @@
 ﻿namespace NewsSearcher
 {
-    partial class Form1
+    partial class FrmNews
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -28,12 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.CmdSearch = new System.Windows.Forms.Button();
+            this.TxtSearcher = new System.Windows.Forms.TextBox();
+            this.News = new System.Windows.Forms.ListBox();
+            this.SuspendLayout();
+            // 
+            // CmdSearch
+            // 
+            this.CmdSearch.Location = new System.Drawing.Point(189, 13);
+            this.CmdSearch.Name = "CmdSearch";
+            this.CmdSearch.Size = new System.Drawing.Size(110, 23);
+            this.CmdSearch.TabIndex = 0;
+            this.CmdSearch.Text = "Search";
+            this.CmdSearch.UseVisualStyleBackColor = true;
+            // 
+            // TxtSearcher
+            // 
+            this.TxtSearcher.Location = new System.Drawing.Point(189, 43);
+            this.TxtSearcher.Name = "TxtSearcher";
+            this.TxtSearcher.Size = new System.Drawing.Size(110, 20);
+            this.TxtSearcher.TabIndex = 1;
+            this.TxtSearcher.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // News
+            // 
+            this.News.FormattingEnabled = true;
+            this.News.Location = new System.Drawing.Point(13, 13);
+            this.News.Name = "News";
+            this.News.Size = new System.Drawing.Size(170, 251);
+            this.News.TabIndex = 2;
+            // 
+            // FrmNews
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(311, 281);
+            this.Controls.Add(this.News);
+            this.Controls.Add(this.TxtSearcher);
+            this.Controls.Add(this.CmdSearch);
+            this.Name = "FrmNews";
+            this.Text = "News";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button CmdSearch;
+        private System.Windows.Forms.TextBox TxtSearcher;
+        private System.Windows.Forms.ListBox News;
     }
 }
 

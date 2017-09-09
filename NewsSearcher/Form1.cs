@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NewsSearcher
 {
-    public partial class Form1 : Form
+    public partial class FrmNews : Form
     {
-        public Form1()
+        public FrmNews()
         {
             InitializeComponent();
         }
