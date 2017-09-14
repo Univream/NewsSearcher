@@ -18,10 +18,12 @@ namespace NewsSearcher
 
     public class NewsResult
     {
-        public string name { get; set; }
+        [JsonProperty(PropertyName = "name")]
+        public string Headline { get; set; }
         public string url { get; set; }
         public Image image { get; set; }
-        public string description { get; set; }
+        [JsonProperty(PropertyName = "description")]
+        public string Summary { get; set; }
         public Provider[] provider { get; set; }
         [JsonProperty(PropertyName = "datePublished")]
         public DateTime Date { get; set; }

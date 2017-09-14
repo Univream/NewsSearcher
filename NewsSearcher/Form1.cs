@@ -39,10 +39,18 @@ namespace NewsSearcher
             {
                 NewsList = serializer.Deserialize<News>(jsonreader).value;
                 foreach (NewsResult news in NewsList)
-                    LstNews.Items.Add(news.name);
+                    LstNews.Items.Add(news);
                  
             }
         
+        }
+
+        private void TxtSearcher_TextChanged(object sender, EventArgs e)
+        {
+            if(TxtSearcher.Text != "")
+            {
+                CmdSearch.Enabled = true; 
+            }
         }
     }
 }
