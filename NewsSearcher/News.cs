@@ -28,6 +28,11 @@ namespace NewsSearcher
         [JsonProperty(PropertyName = "datePublished")]
         public DateTime Date { get; set; }
         public string category { get; set; }
+
+        public override string ToString()
+        {
+            return Headline;
+        }
     }
 
     public class Image

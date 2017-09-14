@@ -39,8 +39,11 @@ namespace NewsSearcher
             {
                 NewsList = serializer.Deserialize<News>(jsonreader).value;
                 foreach (NewsResult news in NewsList)
+                {
                     LstNews.Items.Add(news);
-                 
+                }
+
+
             }
         
         }
@@ -51,6 +54,15 @@ namespace NewsSearcher
             {
                 CmdSearch.Enabled = true; 
             }
+        }
+
+        private void LstNews_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            NewsResult nr = LstNews.SelectedItem as NewsResult;
+
+            string[] summary = nr.Summary.Split(new char[] {'.'}, 2);
+            nr.Summary = string.Join("\n", summary);
+            Lblinfo.Text = nr.Date.ToShortDateString() + "\n" + nr.Headline + "\n" + nr.Summary;
         }
     }
 }

@@ -37,9 +37,9 @@
             // CmdSearch
             // 
             this.CmdSearch.Enabled = false;
-            this.CmdSearch.Location = new System.Drawing.Point(406, 13);
+            this.CmdSearch.Location = new System.Drawing.Point(573, 12);
             this.CmdSearch.Name = "CmdSearch";
-            this.CmdSearch.Size = new System.Drawing.Size(144, 23);
+            this.CmdSearch.Size = new System.Drawing.Size(162, 23);
             this.CmdSearch.TabIndex = 0;
             this.CmdSearch.Text = "Search";
             this.CmdSearch.UseVisualStyleBackColor = true;
@@ -47,9 +47,9 @@
             // 
             // TxtSearcher
             // 
-            this.TxtSearcher.Location = new System.Drawing.Point(406, 44);
+            this.TxtSearcher.Location = new System.Drawing.Point(573, 41);
             this.TxtSearcher.Name = "TxtSearcher";
-            this.TxtSearcher.Size = new System.Drawing.Size(144, 20);
+            this.TxtSearcher.Size = new System.Drawing.Size(162, 20);
             this.TxtSearcher.TabIndex = 1;
             this.TxtSearcher.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TxtSearcher.TextChanged += new System.EventHandler(this.TxtSearcher_TextChanged);
@@ -59,7 +59,7 @@
             this.LstNews.FormattingEnabled = true;
             this.LstNews.Location = new System.Drawing.Point(13, 13);
             this.LstNews.Name = "LstNews";
-            this.LstNews.Size = new System.Drawing.Size(387, 303);
+            this.LstNews.Size = new System.Drawing.Size(554, 303);
             this.LstNews.TabIndex = 2;
             this.LstNews.SelectedIndexChanged += new System.EventHandler(this.LstNews_SelectedIndexChanged);
             // 
@@ -75,7 +75,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(562, 459);
+            this.ClientSize = new System.Drawing.Size(747, 459);
             this.Controls.Add(this.Lblinfo);
             this.Controls.Add(this.LstNews);
             this.Controls.Add(this.TxtSearcher);
