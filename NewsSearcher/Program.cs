@@ -16,7 +16,8 @@ namespace NewsSearcher
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmNews());
+            FrmNews fr = new FrmNews();
+            Application.Run(fr);
         }
     }
 }

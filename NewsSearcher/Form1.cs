@@ -28,15 +28,14 @@ namespace NewsSearcher
         public FrmNews()
         {
             InitializeComponent();
+
         }
 
         private void CmdSearch_Click(object sender, EventArgs e)
-        {
-
-            
+        {   
             string input = TxtSearcher.Text;
 
-
+            // ReturnList
             var NewsList = new List<NewsResult>(); 
             var client = new WebClient();
             client.Headers.Add("Ocp-Apim-Subscription-Key", " d99949bbc4fd4bdab9cec19dcd0406bd");
@@ -44,6 +43,8 @@ namespace NewsSearcher
             byte[] rawNews = null;
             LstNews.Items.Clear(); 
 
+
+            // If user changes the languege checkbox
             switch(language)
             {
                 case (SetLanguage.German):
@@ -63,14 +64,12 @@ namespace NewsSearcher
             using (var jsonreader = new JsonTextReader(reader))
             {
                 NewsList = serializer.Deserialize<News>(jsonreader).value;
-                foreach (NewsResult news in NewsList)
+                foreach(var news in NewsList)
                 {
                     LstNews.Items.Add(news);
                 }
 
-
             }
-        
         }
 
         private void TxtSearcher_TextChanged(object sender, EventArgs e)
@@ -79,6 +78,10 @@ namespace NewsSearcher
             {
                 CmdSearch.Enabled = true; 
             }
+            else
+            {
+                CmdSearch.Enabled = false; 
+            }
         }
 
         private void LstNews_SelectedIndexChanged(object sender, EventArgs e)
@@ -86,15 +89,17 @@ namespace NewsSearcher
             NewsResult nr = LstNews.SelectedItem as NewsResult;
             string[] summary = null; 
 
-            try
+            summary = nr.Summary.Split(new char[] { ' ' });
+
+            int count = 0; 
+            foreach(string word in summary)
             {
-                summary = nr.Summary.Split(new char[] { '.' }, 2);
+                if (count % 10 == 0)
+                    nr.Summary += "\n" + " " + word;
+                else
+                    nr.Summary +=  " " + word;
+                count++;
             }
-            catch(ArgumentNullException)
-            {
-                summary = nr.Summary.Split(new char[] { '.' }, 1);
-            }
-            nr.Summary = string.Join("\n", summary);
             Lblinfo.Text = nr.Date.ToShortDateString() + "\n" + nr.Headline + "\n" + nr.Summary;
         }
 

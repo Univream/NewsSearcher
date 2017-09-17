@@ -38,7 +38,6 @@
             this.Mungerman = new System.Windows.Forms.ToolStripMenuItem();
             this.Munenglish = new System.Windows.Forms.ToolStripMenuItem();
             this.Munfrance = new System.Windows.Forms.ToolStripMenuItem();
-            this.MunCboLength = new System.Windows.Forms.ToolStripComboBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,15 +84,14 @@
             this.Munedit});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(747, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(791, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // Munedit
             // 
             this.Munedit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Munlanguage,
-            this.MunCboLength});
+            this.Munlanguage});
             this.Munedit.Name = "Munedit";
             this.Munedit.Size = new System.Drawing.Size(39, 20);
             this.Munedit.Text = "Edit";
@@ -131,16 +129,11 @@
             this.Munfrance.Text = "France";
             this.Munfrance.Click += new System.EventHandler(this.Munfrance_Click);
             // 
-            // MunCboLength
-            // 
-            this.MunCboLength.Name = "MunCboLength";
-            this.MunCboLength.Size = new System.Drawing.Size(121, 23);
-            // 
             // FrmNews
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(747, 459);
+            this.ClientSize = new System.Drawing.Size(791, 437);
             this.Controls.Add(this.Lblinfo);
             this.Controls.Add(this.LstNews);
             this.Controls.Add(this.TxtSearcher);
@@ -168,7 +161,6 @@
         private System.Windows.Forms.ToolStripMenuItem Mungerman;
         private System.Windows.Forms.ToolStripMenuItem Munenglish;
         private System.Windows.Forms.ToolStripMenuItem Munfrance;
-        private System.Windows.Forms.ToolStripComboBox MunCboLength;
     }
 }
 
