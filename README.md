@@ -1,5 +1,5 @@
 # NewsSearcher
 Uses Bing Search API to Search for News
 
-Notice: 
+Note: 
 - Get your own API [Key](https://azure.microsoft.com/en-us/try/cognitive-services/)
